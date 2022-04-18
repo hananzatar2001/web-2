@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color:rgba(94, 103, 153, 0.575)">
+<html lang="en" style="background-color:antiquewhite">
   
 <head>
     <style>  
@@ -24,7 +24,7 @@
                  top:0px;
                  left:0px;
                  width:100%;
-               background-color: rgb(34, 10, 99);
+               background-color: rgb(0, 0, 0);
      }
            
     li 
@@ -43,11 +43,11 @@
            
     li a:hover:not(.active)
     {
-             background-color:rgb(34, 10, 99);
+             background-color:rgb(0, 0, 0);
      }
      .form-control
     {
-  background-color:#CCCCFF ;
+  background-color:antiquewhite ;
   color: white;
   height: 40px;
   transition:  5px;
@@ -71,7 +71,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <div class="topnav">
-        <h1 style="color: white;margin-left:40px;">Online Book Store</h1>
+        <h1 style="color: white;margin-left:40px;"> bookie</h1>
         <li><a href="  'frontpage' ">Home</a></li>
         <li><a href="{% url 'book_list' %}">All Books</a></li>
         <li><a href="{% url 'viewfav' %}">Favourite Books</a></li>
@@ -93,6 +93,7 @@
             <input type="text" name="status" class="form-control" placeholder="Status" required=""><br>
             <input type="text" name="quantity" class="form-control" placeholder="Quantity" required=""><br>
             <input type="text" name="department" class="form-control" placeholder="Department" required="" ><br>
+            <input type="text" name="book price" class="form-control" placeholder="book price" required="" ><br>
         
           <button type="submit" class="btn btn-primary">Upload Book</button>
     </form>
