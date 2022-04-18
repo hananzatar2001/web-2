@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:rgba(94, 103, 153, 0.575)">
+  
+<head>
+    <style>  
+   
+    .prof-box1
+    {
+               width:750px;
+               height:510px;
+               background-color: rgba(255, 255, 255, 0.575);
+               padding: 20px;
+               color:white;
+               margin:0 auto;
+               margin-top: 190px;
+               text-align: left;
+               
+     }
+    .topnav 
+    {
+               overflow: hidden;
+               position:absolute;
+               
+                 top:0px;
+                 left:0px;
+                 width:100%;
+               background-color: rgb(34, 10, 99);
+     }
+           
+    li 
+    {
+               margin-left: 2em;
+             float: left;
+     }          
+    li a 
+    {
+             display: block;
+             color: white;
+             text-align: center;
+             padding: 10px 14px;
+             text-decoration: none;
+     }
+           
+    li a:hover:not(.active)
+    {
+             background-color:rgb(34, 10, 99);
+     }
+     .form-control
+    {
+  background-color:#CCCCFF ;
+  color: white;
+  height: 40px;
+  transition:  5px;
+  text-align: center;
+
+  
+
+     }
+
+     .POST
+    {
+     width: 400000px;
+     margin: 50px ;
+     }
+     
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Upload Book</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <div class="topnav">
+        <h1 style="color: white;margin-left:40px;">Online Book Store</h1>
+        <li><a href="  'frontpage' ">Home</a></li>
+        <li><a href="{% url 'book_list' %}">All Books</a></li>
+        <li><a href="{% url 'viewfav' %}">Favourite Books</a></li>
+        <li><a href="{% url 'upload_book' %}">Upload Book</a></li>
+        <li><a href="{% url 'logoutpage' %}">Logout  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+          
+          <input type="search"  placeholder="Search Books" name="query" id="query" aria-label="Search">
+          <button type="submit">Search</button>
+        </form>
+        
+    </div>
+    <div class="prof-box1">
+        <h1 style="font-size: 2.1rem;color:black;text-align:center;">Upload Book</h1>
+        <form method="POST" enctype="multipart/form-data" style="color:black">
+            <input type="text" name="bid" class="form-control" placeholder="Book id" required=""><br>
+            <input type="text" name="name" class="form-control" placeholder="Book Name" required=""><br>
+            <input type="text" name="authors" class="form-control" placeholder="Authors Name" required=""><br>
+            <input type="text" name="edition" class="form-control" placeholder="Edition" required=""><br>
+            <input type="text" name="status" class="form-control" placeholder="Status" required=""><br>
+            <input type="text" name="quantity" class="form-control" placeholder="Quantity" required=""><br>
+            <input type="text" name="department" class="form-control" placeholder="Department" required="" ><br>
+        
+          <button type="submit" class="btn btn-primary">Upload Book</button>
+    </form>
+    </div>
+        
+        
+    </div>
+</head>
+<body>
+    
+      
+</body>
+</html>
